@@ -1,5 +1,15 @@
 import { Component } from '@angular/core';
 
+import employeeData from "./employee.json";
+
+interface Employee
+{
+  id:number;
+  name:string;
+  email:string;
+  cmp:string;
+}
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -7,4 +17,6 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'mngjson';
+
+  employees:Employee[]=employeeData;
 }
